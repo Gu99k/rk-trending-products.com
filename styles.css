@@ -13,6 +13,9 @@ body {
   height: 100%;
   width: 100%;
   background-color: #eee;
+  background-color: #eee;
+  scroll-behavior: smooth;
+  scroll-padding: 8rem;
 }
 #page-wraper {
   position: relative;
