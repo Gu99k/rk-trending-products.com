@@ -258,11 +258,7 @@ body {
   margin-bottom: 10px;
   text-decoration: underline;
 }
-.details-process h4 {
-  text-transform: capitalize;
-  padding: 5px 0;
-  margin-bottom: 10px;
-}
+
 .details-process h3 {
   padding: 5px 0;
   margin-top: 20px;
@@ -456,5 +452,11 @@ td {
   .video {
     width: 250px;
     height: 150px;
+  }
+  .details-process h2{
+    font-size:1.4rem;
+  }
+  .details-process h3{
+    font-size:1.1rem;
   }
 }
