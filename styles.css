@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   line-height: 1.4rem;
-  line-height:1.8rem;
+  line-height: 1.8rem;
 }
 
 html,
@@ -14,10 +14,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #eee;
-<<<<<<< HEAD
-=======
   background-color: #eee;
->>>>>>> f9607ff9af0421da5b7f5cbb4efdbb40d799295b
   scroll-behavior: smooth;
   scroll-padding: 8rem;
 }
@@ -237,7 +234,7 @@ h6 {
 .feature-grid {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: stretch;
 }
 #product-features .icons {
@@ -334,9 +331,6 @@ h6 {
   height: 100px;
   width: 100px;
   margin-top: 10px;
-}
-.product h2 {
-  padding: 10px 2px;
 }
 .product ol {
   display: flex;
@@ -495,10 +489,10 @@ a {
     width: 250px;
     height: 150px;
   }
-  .details-process h2{
-    font-size:1.6rem;
+  .details-process h2 {
+    font-size: 1.6rem;
   }
-  .details-process h3{
-    font-size:1.3rem;
+  .details-process h3 {
+    font-size: 1.3rem;
   }
 }
