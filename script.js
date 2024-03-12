@@ -5,10 +5,10 @@ const navMenu = document.querySelector("#nav-menu");
 
 openMenu.addEventListener("click", () => {
   navMenu.style.display = "block";
-  console.log("open");
+ 
 });
 
 closeMenu.addEventListener("click", () => {
   navMenu.style.display = "none";
-  console.log("close");
+  
 });

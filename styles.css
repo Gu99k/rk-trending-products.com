@@ -13,9 +13,21 @@ body {
   height: 100%;
   width: 100%;
   background-color: #eee;
+  scroll-behavior: smooth;
+  scroll-padding: 8rem;
 }
 #page-wraper {
   position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 3px 0;
 }
 /* --------------------------------------------------------Header-Part------------------------------------------ */
 #header {
@@ -31,6 +43,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  z-index: 1000;
 }
 #left-nav {
   display: flex;
@@ -63,7 +76,12 @@ body {
   text-transform: capitalize;
   margin-right: 1.5rem;
 }
-/* -----------------------------------------Sidebar------------------------------------------------------------ */
+.nav-link:hover {
+  background-color: #302e2e;
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+/* -----------------------------------------Sidebar-header------------------------------------------------------- */
 
 #sidebar {
   height: 80px;
@@ -72,6 +90,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   display: none;
+  transition: display 0.9s ease-in;
 }
 #sidebar .open {
   font-size: 30px;
@@ -81,6 +100,7 @@ body {
 }
 #nav-menu {
   display: none;
+  transition: display 3s ease-out;
   position: relative;
 }
 .menu-bar {
@@ -92,6 +112,8 @@ body {
   background-color: #b2b2b2;
   width: 250px;
   position: fixed;
+  transition: 3s ease-out;
+
   /* top: 0; */
 }
 .menu-bar .active {
@@ -126,6 +148,7 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   text-transform: capitalize;
+  color: #000000b3;
 }
 .menu-link {
   padding: 8px 0 8px 16px;
@@ -178,7 +201,7 @@ body {
   background-color: #f1c40f;
   color: #000;
   width: 100%;
-  max-width: 150px;
+  max-width: 175px;
   border: 0;
 }
 
@@ -208,6 +231,9 @@ body {
 }
 .feature-grid {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
 }
 #product-features .icons {
   display: flex;
@@ -235,7 +261,7 @@ body {
   text-align: justify;
   text-justify: inter-word;
 }
-/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------how it work section------------------------------------------------------- */
 #how-it-works {
   margin-top: 55px;
 }
@@ -255,28 +281,28 @@ body {
   margin-bottom: 10px;
   text-decoration: underline;
 }
-.details-process h4 {
-  text-transform: capitalize;
-  padding: 5px 0;
-  margin-bottom: 10px;
-}
+
 .details-process h3 {
   padding: 5px 0;
   margin-top: 20px;
   text-transform: capitalize;
+  font-size: 1.4rem;
 }
 .details-process p {
   color: #302e2e;
   text-align: justify;
   text-justify: inter-word;
 }
-/* ------------------------------------------------------------------------------------------------------------ */
+/* -------------------------------------------pricing section--------------------------------------------------- */
 #pricing {
   margin-top: 60px;
-  display: flex;
+  display: grid;
   justify-content: center;
-  gap: 15px;
+  justify-items: center;
+  gap: 50px 38px;
   align-items: center;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, minmax(199px, 1fr));
 }
 .product {
   height: 300px;
@@ -356,7 +382,7 @@ body {
 .btn2:hover {
   background-color: #c48f1e;
 }
-/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------footer section---------------------------------------------------- */
 #footer {
   margin-top: 50px;
   height: 150px;
@@ -377,20 +403,26 @@ td {
   border-collapse: collapse;
   text-transform: capitalize;
 }
-/*---------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------media section-------------------------------------------*/
 @media only screen and (max-width: 1040px) {
   .purchage-option .btn,
   a {
     font-size: 0.8rem;
     padding: 4px 12px;
   }
+  #pricing {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 @media only screen and (max-width: 815px) {
   #right-nav ul li {
     padding: 4px;
   }
+  .video {
+    width: 498px;
+    height: 315px;
+  }
 }
-
 @media only screen and (max-width: 750px) {
   #right-nav {
     display: none;
@@ -419,8 +451,7 @@ td {
 
 @media only screen and (max-width: 600px) {
   #pricing {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   #table-data,
   tr,
@@ -432,25 +463,30 @@ td {
     width: 80%;
     margin: 0 auto;
   }
-  .video {
-    width: 300px;
-    height: 200px;
-  }
-  .search-heading {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  .details {
-    margin-top: 25px;
-  }
-  .purchage-option .btn,
-  a {
-    font-size: 1rem;
-    padding: 4px 12px;
+  .details-process .video {
+    width: 72vw;
+    height: 46vw;
   }
 }
+.search-heading {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.details {
+  margin-top: 25px;
+}
+.purchage-option .btn,
+a {
+  font-size: 1rem;
+  padding: 4px 12px;
+}
+#product-features .icons {
+  font-size: 36px;
+  width: 10%;
+}
+/* } */
 @media only screen and (max-width: 500px) {
-  .video {
+  .details-process .video {
     width: 250px;
     height: 150px;
   }
