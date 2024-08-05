@@ -4,11 +4,10 @@ const openActive = document.querySelector(".menu-bar");
 const navMenu = document.querySelector("#nav-menu");
 
 openMenu.addEventListener("click", () => {
-  navMenu.style.display = "block";
- 
+  navMenu.style.left = "0";
 });
 
 closeMenu.addEventListener("click", () => {
-  navMenu.style.display = "none";
-  
+  navMenu.style.left = "-250px";
+  // navMenu.style.width = "0";
 });
