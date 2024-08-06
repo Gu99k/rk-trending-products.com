@@ -118,7 +118,7 @@ h6 {
   background-color: #b2b2b2;
   position: fixed;
   transition: 3s ease-out;
-
+  z-index: 1;
   /* top: 0; */
 }
 .menu-bar .active {
